@@ -1,0 +1,132 @@
+:root {
+   --font-color: #aed3e1;
+   --bg-color: #070090;
+}
+
+.item1 { grid-area: logo; }
+.item2 {
+	grid-area: flashy_title;
+	text-align: center;
+	color: white
+}
+.item3 {
+	grid-area: search;
+	text-align: center;
+	font-size: 3em;
+}
+.item4 { grid-area: banner; }
+.item5 { grid-area: main1; }
+.item6 { grid-area: main2; }
+.item7 { grid-area: nav; }
+.item8 { grid-area: foot; }
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 200px auto auto;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: 
+		'logo flashy_title flashy_title' 
+		'search search search'
+		'banner main1 main2'
+		'nav foot foot';
+}
+
+body {
+	margin: 0;                  
+	font-family: Arial, sans-serif;
+	color: var(--font-color);
+	background-color: var(--bg-color);
+}
+
+nav {
+   grid-area: nav;
+   color: var(--bg-color);
+   font-size: 1.5em;	
+}
+
+foot {
+	text-align: center;
+	grid-area: foot;
+}
+
+h1 {
+   color: white;
+   font-size: 4rem;
+   font-style: italic;
+   font-variant: arial;
+   text-align: center;
+}
+
+h2 {
+   color: var(--header-color);
+   font-size: 1.5rem;
+   font-variant: small-caps;
+}
+
+h3 {
+   font-size: 0.9rem;
+   text-align: left;
+}
+
+h4 {
+   color: cyan;
+   font-size: 2.5rem;
+   font-variant: arial;
+   text-align: center;
+}
+
+input[type=submit] {
+   width: 200px;
+   background-color: #09f;
+   color: white;
+   font-size: 2rem;
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 40px;
+   cursor: pointer;
+}
+
+input[type=submit]:hover {
+   background-color: green;
+}
+
+/* First focusing on the Desktop presentation; if time permits, may try to tackle responsive display on smaller screens */
+/* Desktop   
+@media all and (min-width: 800px) {
+   body {         
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: auto auto auto auto; 
+      grid-template-areas: 
+         "logo flashy_title flashy_title" 
+		 "search search search"
+         ". main nav"
+         "foot foot foot";
+   }
+}
+
+/*
+@media screen and (min-width: 600px) {
+   body {
+      background-color: blue;
+   }
+}
+@media screen and (min-width: 800px) {
+   body {
+      background-color: red;
+   }
+}
+
+/* Tablet 
+@media all and (min-width: 600px) {
+   body {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;    
+      grid-template-areas: 
+         "head head" 
+         "logo main"
+         "nav main"
+         "foot foot";
+   }
+}
+*/
